@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iniciar seccion</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <main> 
+        <form id="login__form">
+            <h2 class="form__title">Iniciar seccion</h2>
+            <ion-icon id="icon" name="person-circle-sharp"></ion-icon>
+            <div class="input__container">
+                <ion-icon class="icon__input" name="person-outline"></ion-icon>
+                <input class="input -user" name="user" id="user" required type="text" placeholder= 'usuario'>
+            </div>
+            <div class="input__container">
+                <ion-icon class="icon__input" name="bag-outline"></ion-icon> 
+                <input class="input -password" name="password" id="password" type="password" required>
+            </div>
+            <select class="input -rol " name="rol" id="rol">
+                <option value="seleccione una opcion">Seleccione su rol</option>
+                <option value="admin">Admin</option>
+                <option value="profesor">Profesor</option>
+                <option value="estudiante">Estudiante</option>
+            </select>
+            <button name="button" id="button" type="submit">Iniciar seccion</button>
+            <button id="btn-recuperarContraseña" type="submit">Recuperar Contraseña</button>
+            <p id="error" class="escondido">
+                ¡Error de inicio de seccion!
+            </p>
+        </form>
+        <div class="welcomen__wrapper">
+            <div class="welcomen__container">
+                <h2 class="welcome__title">¡Bienvenido!</h2>
+                <p class="welcome">
+                    Sistema De Gestion Academica<br><br>
+                    <span>ingresa con tus datos</span>
+                </p>
+        </div>
+            </div>
+            
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,163 @@
+body{
+    background-color: #f5f5f5;
+    height: 100%;
+    font-family: sans-serif; 
+    container-type: inline-size;
+    container-name: body;
+}
+main{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    justify-content: space-between;
+    background-color: #fffafa;
+    margin: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 10px 10px 10px  10px;
+    box-shadow: 0px 5px 53px 30px #0001;
+    container-type: inline-size;
+    container-name: main;
+}
+#login__form{
+    display: flex; 
+    flex-direction: column;
+    width: 50% ;
+}
+#button{
+    width: 10em;
+    height: 3em;
+    margin-top: 5%;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    background-color: #008b8b;
+    border: none;
+    border-radius: 5px;
+    color: #f5f5f5;
+}
+.form__title{
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#icon{
+    font-size: 6em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #008b8b;
+}
+.welcomen__wrapper{
+    width: 50%;
+    background-color: #008b8b;
+    border-radius: 100% 10px 10px  100%;
+    border-left: 2px solid #009b9b;
+    container-type: inline-size;
+    container-name: welcome;
+    display: flex;
+}
+.welcomen__container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.welcome__title{
+    margin: 0;
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
+    color: #f5f5f5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
+}
+
+.input__container{
+    width: 80%;
+    height: 3em;
+    background-color: #ededed;
+    margin: auto;  
+    margin-top: 3%;
+    margin-bottom: 3%;
+    align-items: center;
+
+}
+.input{
+    width: 80%;
+    height: 1em;
+    margin: auto;
+    margin-bottom: 5%;
+    background-color: #ededed;
+    border: none;
+    margin-top: 5px;
+    outline: none;
+    padding: 5px;
+}
+.icon__input{
+    font-size: 1.2em;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.-rol{
+    height: 3em;
+    color: #003;
+}
+.welcome{
+    margin-top: 5%;
+    font-size: 1.2em;
+    color: #f5f5f5;
+    text-align: center;
+}
+#btn-recuperarContraseña{
+    width: 13em;
+    height: 3em;
+    margin-bottom: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2px;
+    background-color: #008b8b;
+    border: 1px solid #f5f5f5;
+    border-radius: 5px;
+    color: #fffafa;
+    display: block;
+}
+#error{
+    text-align: center;
+    font-size: 1.2em;
+    color: rgb(180, 2, 2);
+}
+.escondido{
+    display: none;
+}
+
+
+/*querys---------------------------------------------------------------------------------*/
+@container body (max-width: 720px){
+    main{
+        flex-direction: column;
+        height: auto;
+        margin-bottom: 5%;
+    }
+}
+@container main (max-width: 720px){
+    .welcomen__wrapper{
+        order: 1;
+        border-radius: 0;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    #login__form{
+        width: 100%;
+        order: 2;
+
+    }
+}
+@container welcome (max-width: 720px){
+    .welcome__title{
+        margin-top: 0;
+    }
+}
+

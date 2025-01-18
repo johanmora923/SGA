@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href= "admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=League+Spartan:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+<body class="body">
+    <header class="header">
+        <nav class="header__navbar">
+            <div id="header__user">
+                <ion-icon class="icon__user" name="person-circle"></ion-icon>
+                <span id="user__name" class="name__user"></span>
+            </div> 
+            <div class="header__input-container">
+                <input type="text" name="search" class="header__input">
+                <ion-icon class="icon__input" name="search-outline"></ion-icon>
+            </div>
+            <div class="hearder__icon-container -users" >
+                <ion-icon  class="icon__nav"  name="person"></ion-icon>
+                <span class="header__label" >usuarios</span>
+            </div>
+            <div class="hearder__icon-container -teachers">
+                <ion-icon  class="icon__nav"  name="school"></ion-icon>
+                <span class="header__label" >docentes</span>
+            </div>
+            <div class="hearder__icon-container -matricula">
+                <ion-icon  class="icon__nav"  name="id-card"></ion-icon>
+                <span class="header__label" >matricula</span>
+            </div>
+            <div class="hearder__icon-container -horarios">
+                <ion-icon  class="icon__nav"  name="today"></ion-icon>
+                <span class="header__label" >horarios</span>
+            </div>
+            <div class="hearder__icon-container -pagos">
+                <ion-icon  class="icon__nav"  name="wallet"></ion-icon>
+                <span class="header__label" ">pagos</span>
+            </div>
+            <div class="hearder__icon-container -cursos">
+                <ion-icon  class="icon__nav"  name="library"></ion-icon>
+                <span class="header__label" >cursos</span>
+            </div>
+            <div class="hearder__icon-container -grados">
+                <ion-icon  class="icon__nav" name="layers"></ion-icon>
+                <span class="header__label">grados</span>
+            </div>
+            <div class="hearder__icon-container -reportes">
+                <ion-icon class="icon__nav" name="warning" ></ion-icon>
+                <span class="header__label" >reportes</span>
+            </div>
+            <div class="hearder__icon-container -aulas">
+                <ion-icon  class="icon__nav"  name="easel"></ion-icon>
+                <span class="header__label" >aulas</span>
+            </div>
+        </nav>
+    </header>
+    <nav class="home__nav">
+            <ion-icon class="home__navIcon -icon1" name="home-outline"></ion-icon>
+            <ion-icon class="home__navIcon -icon2"  name="notifications-outline"></ion-icon>
+            <ion-icon class="home__navIcon -icon3" name="person"></ion-icon>
+            <ion-icon  class="home__navIcon -icon4" name="exit-outline"></ion-icon>
+        </nav>
+    <section class="main">
+        <section id="users" class="panel">
+            <div class="title__users-container">
+                <h2 class="title__users">administrar usuario</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class="button__agg"><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>       
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
+                        <table id="tablaUsers" class="table table-striped table-bordered" style="width:100%"> 
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>nombre</th>
+                                    <th>apellido</th>   
+                                    <th>rol</th>        
+                                    <th>sex</th>
+                                    <th>accion</th>                      
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                            </tbody>
+                        </table>                 
+                    </div>
+            </div>
+            </div>
+        </section>
+        <section id="teachers" class="panel">
+            <div class="modal__add-courses -escondido">
+                <form class="form__courses">
+                    <h2 class="title__add-course">Asignar Curso</h2>
+                    <select name="courses" id="courses">
+                        
+                    </select>
+                    <div class="btn__container">
+                        <button class="btn__cancelar">Cancelar</button>
+                        <button class="btn__asignar">Asignar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="title__users-container">
+                <h2 class="title__users">docentes</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class="button__agg -add-teacher"><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+                <div class="teacher__wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <table id="tablaTeachers" class="table table-striped table-bordered" style="width:100%"> 
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>nombre</th>
+                                            <th>apellido</th>
+                                            <th>edad</th>   
+                                            <th>accion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyteachers">
+                                    </tbody>
+                                </table>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid -cursos__teacher">
+                        <div class="row">
+                            <div class="col">
+                                <table id="tablaAC" class="table table-striped table-bordered" style="width:100%"> 
+                                    <thead>
+                                        <tr>
+                                            <th>seccion</th>
+                                            <th>curso</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyAC">
+                                    </tbody>
+                                </table>           
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="modal -teacher">
+                <div class="modal__wrapper">
+                    <ion-icon id="iconAdd" name="person-circle-sharp"></ion-icon>
+                    <ion-icon  class="modal__Icon -close2" name="exit-outline"></ion-icon>
+                    <h2 class="title__register">registrar docente</h2>
+                    <form id="form__teacher" class="form">
+                        <input type="text" name="name" id="input__name" placeholder="nombre">
+                        <input placeholder="apellido" type="text" name="lastname" id="input__lastname">
+                        <input placeholder="edad" type="number" name="age" id="input__age">
+                        <input type="submit" value="Registrar">
+                    </form>
+                    <p class="escondido" class="error2">error al registrar</p>
+                </div>
+            </div>
+        </section>
+        <section class="panel" id="matricula" >
+            <div class="modal__add -user">
+                <div class="modal__wrapper">
+                    <ion-icon id="iconAdd" name="person-circle-sharp"></ion-icon>
+                    <ion-icon  class="modal__Icon -close" name="exit-outline"></ion-icon>
+                    <h2 class="title__register">registrar nuevo usuario</h2>
+                    <form id="register__form" class="form">
+                    <input id="name" name="name" class="form__input -name"  placeholder="nombre" type="text">
+                    <input id="lastname" name="lastname" class="form__input -lastname"  placeholder="apellido" type="text">
+                    <input id="user" name="user" class="form__input -user"  placeholder="nombre de usuario" type="text">
+                    <input id="email" name="email" class="form__input -email" type="email" placeholder="email">
+                    <input id="password" name="password" required placeholder="contraseña" class="form__input -password" type="password">
+                    <select name="rol" class="form__input -type" id="rol">
+                        <option value="seleccione el rol">seleccione el rol</option>
+                        <option value="admin">admin</option>
+                        <option value="profesor">profesor</option>
+                        <option value="estudiante">estudiante</option>
+                    </select>
+                    <select class="form__input -sex" name="sex" id="sex">
+                        <option value="seleccione">seleccione el genero</option>
+                        <option value="masc">masc</option>
+                        <option value="fem">fem</option>
+                    </select>
+                    <input type="submit" value="registrar" class="form__input -submit">
+                    <p class="escondido" class="error">error al registrar</p>
+                </form>
+                </div>
+            </div>
+            <div class="title__users-container">
+                <h2 class="title__users">Matricula</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class="button__agg -matricula"><ion-icon name="add-outline"></ion-icon>Nuevo</button>
+                </div>
+                <div class="line"></div>
+                <div class="matricula__wrapper">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <table id="tablaMatricula" class="table table-striped table-bordered" style="width:100%"> 
+                                    <thead>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>nombre</th>
+                                            <th>apellido</th>
+                                            <th>edad</th>   
+                                            <th>sex</th>
+                                            <th>Personal ID</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableBodyMatricula">
+                                    </tbody>
+                                </table>                  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__add-student">
+                        <div class="modal__wrapper">
+                            <ion-icon id="iconAdd" name="person-circle-sharp"></ion-icon>
+                            <ion-icon  class="modal__Icon -close" name="exit-outline"></ion-icon>
+                            <h2 class="title__register">Registrar nuevo estudiante</h2>
+                            <form id="form-student" class="form">
+                            <input id="name-student" name="name" class="form__input -name"  placeholder="nombre" type="text">
+                            <input id="lastname-student" name="lastname" class="form__input -lastname"  placeholder="apellido" type="text">
+                            <input id="age" name="age" class="form__input -age"  placeholder="edad-student" type="number">
+                            <input id="sex-student" name="sex" class="form__input -sex" type="text" placeholder="sexo">
+                            <input id="personalID" name="personalID" required placeholder="personal ID" class="form__input -personalID" type="number">
+                            <input type="submit" value="registrar" class="form__input -submit">
+                            <p class="escondido" class="error">error al registrar</p>
+                        </form>
+                        </div>
+                    </div>
+        </section>
+        <section class="panel" id="horarios">
+            <div class="title__users-container">
+                <h2 class="title__users">horarios</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class="button__agg"><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>          
+            <div class="list">   
+            <div class="list__header">
+                <div class="item"># </div>
+                <div class="item">usuario </div>
+                <div class="item">apellidos  </div>
+                <div class="item">cargo  </div>
+                <div class="item">sexo  </div>
+                <div class="item">estado </div>
+                <div class="item">opcion </div>
+            </div>
+            <div class="line"></div>
+            </div>
+        </section>
+        <section class="panel" id="pagos">
+            <div class="title__users-container">
+                <h2 class="title__users">pagos</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class=""><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>          
+            <div class="list">   
+            <div class="list__header">
+                <div class="item"># </div>
+                <div class="item">usuario </div>
+                <div class="item">apellidos  </div>
+                <div class="item">cargo  </div>
+                <div class="item">sexo  </div>
+                <div class="item">estado </div>
+                <div class="item">opcion </div>
+            </div>
+            <div class="line"></div>
+            </div>
+        </section>
+        <section class="panel" id="cursos">
+            <div class="title__users-container">
+                <h2 class="title__users">cursos</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class="button__agg"><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>          
+            <div class="list">   
+            <div class="list__header">
+                <div class="item"># </div>
+                <div class="item">usuario </div>
+                <div class="item">apellidos  </div>
+                <div class="item">cargo  </div>
+                <div class="item">sexo  </div>
+                <div class="item">estado </div>
+                <div class="item">opcion </div>
+            </div>
+            <div class="line"></div>
+            </div>
+        </section>
+        <section class="panel" id="grados">
+            <div class="title__users-container">
+                <h2 class="title__users">grados</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class=""><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>          
+            <div class="list">   
+            <div class="list__header">
+                <div class="item"># </div>
+                <div class="item">usuario </div>
+                <div class="item">apellidos  </div>
+                <div class="item">cargo  </div>
+                <div class="item">sexo  </div>
+                <div class="item">estado </div>
+                <div class="item">opcion </div>
+            </div>
+            <div class="line"></div>
+            </div>
+        </section>
+        <section class="panel" id="reportes">
+            <div class="title__users-container">
+                <h2 class="title__users">reportes</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class=""><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>          
+            <div class="list">   
+            <div class="list__header">
+                <div class="item"># </div>
+                <div class="item">usuario </div>
+                <div class="item">apellidos  </div>
+                <div class="item">cargo  </div>
+                <div class="item">sexo  </div>
+                <div class="item">estado </div>
+                <div class="item">opcion </div>
+            </div>
+            <div class="line"></div>
+            </div>
+        </section>
+        <section class="panel" id="aulas">
+            <div class="title__users-container">
+                <h2 class="title__users">aulas</h2>
+            </div>
+            <div>
+                <div class="nav__users-section">
+                    <div class="input__container">
+                        <input name="search" class="input__nav-users-section" type="search">
+                        <ion-icon class="icon__buscar-user-section" name="search-outline"></ion-icon>
+                    </div>
+                    <button class=""><ion-icon name="add-outline"></ion-icon>nuevo</button>
+                </div>
+                <div class="line"></div>
+            </div>          
+            <div class="list">   
+            <div class="list__header">
+                <div class="item"># </div>
+                <div class="item">usuario </div>
+                <div class="item">apellidos  </div>
+                <div class="item">cargo  </div>
+                <div class="item">sexo  </div>
+                <div class="item">estado </div>
+                <div class="item">opcion </div>
+            </div>
+            <div class="line"></div>
+            </div>
+        </section>
+</section>
+    <script src="admin.js" defer></script>
+    <script src="register.js" defer></script>
+    <script type ="module"src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"> </script> 
+    <script  nomodule  src = "https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

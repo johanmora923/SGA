@@ -1,0 +1,237 @@
+
+body{
+    background-color: #f5f5f5;
+}
+.panel{
+    display: none;
+}
+.main{
+    position: relative;
+}
+.active{
+    background-color: #ffe;
+    width: 98%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 10px;
+    box-shadow: 8px 8px 39px -9px rgb(14, 22, 20)
+}
+.title__users-container{
+    height: 50px;
+    width: 100%;
+    font-size: 1.6em;
+    padding-left: 20px;
+    color: #ffe;
+    background-color: #2e8b57;
+    font-family: "Oswald", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+.nav__users-section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.container-fluid{
+    margin-top: 5%;
+}
+.wrapper{
+    width: 95%;
+    height: 2px;
+    background-color: #002;
+    margin: auto;
+    margin-top: 10px;
+}
+.input__container{
+    display: inline-flex;
+    width: 400px;
+    height: 40px;
+    margin-left: 15px;
+    margin-top: 20px;
+    border: 1px solid #000;
+    background-color:  rgb(161, 10, 10);
+}
+.input__nav-users-section{
+    width: 370px;
+    height: 40px;
+    outline: none;
+}
+.icon__buscar-user-section{
+    font-size: 1.2em;
+    margin-top: 10px;
+    margin-left: 4px;
+    color: #fff;
+}
+.button__agg{
+    margin-right: 50px;
+    width: 100px;
+    height: 40px;
+    background-color:  #2e8b57;
+    margin-top: 20px;
+    border-radius: 2px;
+    border: none;
+}
+.header__users-section{
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 1.2em;
+}
+
+
+
+
+/*modal........................................................................*/
+
+.modal__add{
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: #0001;
+}
+.modal__wrapper{
+    width: 50%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    margin-left: 15%;
+    margin-bottom: 3%;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+#iconAdd{
+    margin: auto;
+    font-size: 7em;
+    color: #008b8b;
+}
+.title__register{
+    margin: auto;
+    margin-top: 5%;
+    font-size: 1.8em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#register__form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.form__input{
+    width: 50%;
+    height: 3em;
+    margin-top: 5%;
+    background-color: #ededed;
+    border: none;
+    font-size: 1em;
+    outline: none;
+}
+.-submit{
+    background-color: #008b8b;
+    color: #fff;
+}
+.error{
+    color: #8b0000;
+    font-size: 1.2em;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.escondido{
+    display: none;
+}
+
+.modal__Icon{
+    position: absolute;
+    left: 90%;
+    font-size: 2em;
+}
+.btn-show{
+    background-color: #2e8b57;
+}
+.btn-edit{
+    background-color: #008b8b;
+}
+#show,#edit,#delete,#add{
+    border: none;
+    color: #fdfefd;
+    font-size: 1.2em;
+    width: 15%;
+    height: 1.5em;
+    margin: 5px;
+}
+
+.btn-eliminar{
+    margin: 10px;
+    width: 5em;
+    height: 2em;
+    font-size: 0.8em;
+    background-color: rgb(161, 10, 10);
+    color: #fff;
+}
+
+/*teacher section---------------------------------------------------------------------------*/
+#teachers{
+    position: relative;
+}
+.btn__container{
+    margin: auto;
+}
+.teacher__wrapper{
+    display: flex;
+    flex-direction: row;
+}
+
+.modal__add-courses{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #0009;
+    z-index: 1;
+    display: flex;
+}
+.form__courses{
+    width: 40%;
+    height: 40%;
+    background-color: hsl(120, 33%, 99%);
+    margin: auto;
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.-escondido{
+    display: none;
+}
+.btn__cancelar{
+    width: 100px;
+    border: none;
+    background-color: transparent;
+}
+.btn__asignar{
+    width: 100px;
+    border: none;
+}
+#courses{
+    width: 70%;
+    height: 3em;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    background-color: #ededed;
+    border: none;
+}
+.title__add-course{
+    text-align: center;
+    margin-top: 5%;
+    font-family: sans-serif;
+}
+
+.modal__add-student{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
